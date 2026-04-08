@@ -7,3 +7,7 @@ class FileComparator:
             return set()
         with open(filepath, 'r', encoding='utf-8') as f:
             return set(line.strip() for line in f if line.strip())
+        
+    def find_intersection(self, set1, set2):
+        """Знаходить персонажів, які є в обох списках."""
+        return set1.intersection(set2)
