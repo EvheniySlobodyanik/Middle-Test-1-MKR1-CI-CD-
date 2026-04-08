@@ -26,11 +26,11 @@ class FileComparator:
 
 def main():
     comparator = FileComparator()
-    lines1 = comparator.read_file_lines('file1.txt')
-    lines2 = comparator.read_file_lines('file2.txt')
+    lines1 = comparator.read_file_lines('examples/file1.txt')
+    lines2 = comparator.read_file_lines('examples/file2.txt')
 
-    comparator.write_to_file('same.txt', comparator.find_intersection(lines1, lines2))
-    comparator.write_to_file('diff.txt', comparator.find_difference(lines1, lines2))
+    comparator.write_to_file('finished/same.txt', comparator.find_intersection(lines1, lines2))
+    comparator.write_to_file('finished/diff.txt', comparator.find_difference(lines1, lines2))
 
 
 if __name__ == "__main__":
