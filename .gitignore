@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+.venv/
+venv/
+ENV/
+env/
+
+.pytest_cache/
+report.html
+assets/
+.coverage
+htmlcov/
+
+#Було б правильно тут проігнорувати .txt файли, але так як я створив папку examples з ними, то не додаю
+!requirements.txt
+
+.DS_Store
+Thumbs.db
