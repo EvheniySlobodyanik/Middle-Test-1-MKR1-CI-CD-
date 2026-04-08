@@ -25,8 +25,8 @@ class FileComparator:
 def main():
     comparator = FileComparator()
 
-    banner1 = comparator.read_file_lines('file1.txt')
-    banner2 = comparator.read_file_lines('file2.txt')
+    banner1 = comparator.read_file_lines('examples/file1.txt')
+    banner2 = comparator.read_file_lines('examples/file2.txt')
     
     comparator.write_to_file('same.txt', comparator.find_intersection(banner1, banner2))
     comparator.write_to_file('diff.txt', comparator.find_difference(banner1, banner2))
