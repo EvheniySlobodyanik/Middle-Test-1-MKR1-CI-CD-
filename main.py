@@ -11,3 +11,7 @@ class FileComparator:
     def find_intersection(self, set1, set2):
         """Знаходить персонажів, які є в обох списках."""
         return set1.intersection(set2)
+    
+    def find_difference(self, set1, set2):
+        """Знаходить унікальних персонажів (симетрична різниця)."""
+        return set1.symmetric_difference(set2)
