@@ -15,3 +15,21 @@ class FileComparator:
     def find_difference(self, set1, set2):
         """Знаходить унікальних персонажів (симетрична різниця)."""
         return set1.symmetric_difference(set2)
+    
+    def write_to_file(self, filepath, data):
+        """Записує імена персонажів у файл."""
+        with open(filepath, 'w', encoding='utf-8') as f:
+            for line in sorted(data):
+                f.write(f"{line}\n")
+
+def main():
+    comparator = FileComparator()
+
+    banner1 = comparator.read_file_lines('file1.txt')
+    banner2 = comparator.read_file_lines('file2.txt')
+    
+    comparator.write_to_file('same.txt', comparator.find_intersection(banner1, banner2))
+    comparator.write_to_file('diff.txt', comparator.find_difference(banner1, banner2))
+
+if __name__ == "__main__":
+    main()
